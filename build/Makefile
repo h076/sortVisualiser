@@ -142,6 +142,19 @@ insertionSort/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/insertionSort.dir/build.make CMakeFiles/insertionSort.dir/build
 .PHONY : insertionSort/fast
 
+#=============================================================================
+# Target rules for targets named countingSort
+
+# Build rule for target.
+countingSort: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 countingSort
+.PHONY : countingSort
+
+# fast build rule for target.
+countingSort/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/countingSort.dir/build.make CMakeFiles/countingSort.dir/build
+.PHONY : countingSort/fast
+
 bubbleSort.o: bubbleSort.cpp.o
 .PHONY : bubbleSort.o
 
@@ -165,6 +178,30 @@ bubbleSort.s: bubbleSort.cpp.s
 bubbleSort.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bubbleSort.dir/build.make CMakeFiles/bubbleSort.dir/bubbleSort.cpp.s
 .PHONY : bubbleSort.cpp.s
+
+countingSort.o: countingSort.cpp.o
+.PHONY : countingSort.o
+
+# target to build an object file
+countingSort.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/countingSort.dir/build.make CMakeFiles/countingSort.dir/countingSort.cpp.o
+.PHONY : countingSort.cpp.o
+
+countingSort.i: countingSort.cpp.i
+.PHONY : countingSort.i
+
+# target to preprocess a source file
+countingSort.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/countingSort.dir/build.make CMakeFiles/countingSort.dir/countingSort.cpp.i
+.PHONY : countingSort.cpp.i
+
+countingSort.s: countingSort.cpp.s
+.PHONY : countingSort.s
+
+# target to generate assembly for a file
+countingSort.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/countingSort.dir/build.make CMakeFiles/countingSort.dir/countingSort.cpp.s
+.PHONY : countingSort.cpp.s
 
 insertionSort.o: insertionSort.cpp.o
 .PHONY : insertionSort.o
@@ -199,10 +236,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bubbleSort"
+	@echo "... countingSort"
 	@echo "... insertionSort"
 	@echo "... bubbleSort.o"
 	@echo "... bubbleSort.i"
 	@echo "... bubbleSort.s"
+	@echo "... countingSort.o"
+	@echo "... countingSort.i"
+	@echo "... countingSort.s"
 	@echo "... insertionSort.o"
 	@echo "... insertionSort.i"
 	@echo "... insertionSort.s"

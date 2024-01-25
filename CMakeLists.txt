@@ -35,3 +35,18 @@ target_include_directories(
   insertionSort PRIVATE
   /Library/Frameworks/SDL2.framework/Versions/A/Headers
 )
+
+set(COUNTING_SOURCE
+    countingSort.cpp)
+
+add_executable(countingSort ${COUNTING_SOURCE})
+
+target_link_libraries(
+  countingSort PRIVATE
+  /Library/Frameworks/SDL2.framework/Versions/A/SDL2
+)
+
+target_include_directories(
+  countingSort PRIVATE
+  /Library/Frameworks/SDL2.framework/Versions/A/Headers
+)

@@ -25,17 +25,17 @@ int main() {
     SDL_LogSetAllPriority(SDL_LOG_PRIORITY_VERBOSE);
 
     // initialise window
-	SDL_Window *window = SDL_CreateWindow("Test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+	SDL_Window *window = SDL_CreateWindow("Insertion Sort", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 	if(window == nullptr) {
 		cout << "ERROR: can't create window: " << SDL_GetError() << "\n";
-		return EXIT_FAILURE;
+		return 1;
 	}
 
     // initialise renderer
 	SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);
 	if(renderer == nullptr) {
 		cout << "ERROR: can't create renderer: " << SDL_GetError() << "\n";
-		return EXIT_FAILURE;
+		return 1;
 	}
 
     // populate vector with 100 values

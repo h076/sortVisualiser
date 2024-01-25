@@ -24,7 +24,7 @@ int main() {
 
     SDL_LogSetAllPriority(SDL_LOG_PRIORITY_VERBOSE);
 
-	SDL_Window *window = SDL_CreateWindow("Test", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
+	SDL_Window *window = SDL_CreateWindow("Bubble Sort", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
 			SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
 	if(window == nullptr) {
 		cout << "ERROR: can't create window: " << SDL_GetError() << "\n";
